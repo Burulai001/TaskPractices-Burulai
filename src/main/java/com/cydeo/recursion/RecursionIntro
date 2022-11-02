@@ -1,0 +1,11 @@
+
+* Recursion is a method that calls itself.It helps us to break big problems into a small problems
+* You need to have a base case, in other words a stopping condition
+* Recursion reduces the need for complex loops and auxiliary DS.
+* It can also lead to out of memory errors/stack overflow exceptions
+* Can reduce time complexity easily with memoization
+* Works really well with recursive structures like trees and graphs
+
+
+1. What is the base case?
+2.What is the smallest amount of work i can do in each iteration?

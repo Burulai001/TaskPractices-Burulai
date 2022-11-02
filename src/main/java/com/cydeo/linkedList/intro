@@ -1,0 +1,11 @@
+LL is a DS, and made up with many nodes linked together
+Node is just a container for  data.
+You can store any data: String,int,obj.
+LL is an ordered DS.
+
+You can compare LL to arrays because it is also
+an ordered DS.
+Insertion in LL is O(1) compare to Array O(n)in the best case
+
+
+
