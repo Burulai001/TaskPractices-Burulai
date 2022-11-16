@@ -1,16 +1,16 @@
 package com.cydeo.binarySearch;
 
-public class BinarySearch1 {
+public class Floor {
     public static void main(String[] args) {
         int[] arr={1,3,4,5,8,15,20,26,27};
-        int target=26;
-        System.out.println(solution1(arr,target));
+        int target=6;
+        System.out.println(floorSolution(arr,target));
     }
 
 
-    //return the index of a target number
-    //return -1 if target number does not exist
-    static int solution1(int[] arr,int target){
+    //return the index of the greatest number >= target
+
+    static int floorSolution(int[] arr,int target){
 
         int start=0;
         int end=arr.length-1;
@@ -27,7 +27,8 @@ public class BinarySearch1 {
                 return mid;
             }
         }
-       return -1;
+        return end;
     }
 }
+
 // O(log n)
