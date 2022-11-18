@@ -4,17 +4,21 @@ import java.util.Arrays;
 
 public class MissingNumber {
 
+    public static void main(String[] args) {
 
-    static int BruteForceSolution(int[] arr) {
+        int[] arr={3,0,1};
+        System.out.println(cyclicSortSolution(arr));
+    }
+    static int bruteForceSolution(int[] arr) {
         Arrays.sort(arr); // time complexity of sort method is from O(n) to O(n log(n))
-        for (int i = 0; i < arr.length; i++) {
-            if (i != arr[i])
-                return i;
+        for (int index = 0; index < arr.length; index++) {
+            if (index != arr[index])
+                return index;
         }
         return arr.length;
     }
 
-    static int BinarySearchSolution(int[] arr) {
+    static int binarySearchSolution(int[] arr) {
 
         Arrays.sort(arr);
         int start = 0;
@@ -37,4 +41,32 @@ public class MissingNumber {
         return start;
 
     }
-}
+
+    static int cyclicSortSolution(int[] arr) {
+
+        int i = 0;
+        while (i < arr.length) {
+            int correct = arr[i];
+            if (arr[i] < arr.length && arr[i] != arr[correct]) {
+                swap(arr, i, correct);
+            } else {
+                i++;
+            }
+        }
+
+        for (int index = 0; index < arr.length; index++) {
+            if (index != arr[index]) {
+                return index;
+            }
+        }
+        return arr.length;
+    }
+
+
+    static void swap(int[] arr, int first,int second){
+        int temp=arr[first];
+        arr[first]=arr[second];
+        arr[second]=temp;
+    }
+
+    }

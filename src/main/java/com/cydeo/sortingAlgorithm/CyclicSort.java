@@ -22,10 +22,10 @@ public class CyclicSort {
         }
     }
 
-    static void swap(int[] arr, int first,int second){
-        int temp=arr[first];
-        arr[first]=arr[second];
-        arr[second]=temp;
+    static void swap(int[] arr, int i,int correct){
+        int temp=arr[i];
+        arr[i]=arr[correct];
+        arr[correct]=temp;
     }
 
 
